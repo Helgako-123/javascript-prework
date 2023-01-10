@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#buttons {
+    padding-top: 5em;
+}
+
+#play-rock, #play-paper, #play-scissors {
+  background-color: #f199c6;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  box-shadow: #000000 4px 4px 0 0;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#play-rock:hover {
+  background-color: #fff;
+}
+
+#messages {
+    padding-top: 5em;
+}
+
