@@ -1,4 +1,4 @@
-function playGame(){
+function playGame(argMovePlayer){
     let playerInput
     clearMessages()
 
@@ -22,35 +22,16 @@ function playGame(){
 
     let computerMove = getMoveName(randomNumber);
 
-    /*if(randomNumber == 1){
-    computerMove = 'kamień';
-    } else if (randomNumber == 2) {
-        computerMove = 'papier';
-    } else if (randomNumber == 3) {
-        computerMove = 'nożyce';
-    } */
-
     printMessage('Mój ruch to: ' + computerMove); 
-
-
-    /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.'); */
 
     console.log('Gracz wpisał: ' + playerInput);
 
-    let playerMove = getMoveName(playerInput);
-
-    /*if(playerInput == '1'){
-    playerMove = 'kamień';
-    } else if (playerInput == '2'){
-        playerMove = 'papier';
-    } else if (playerInput == '3'){
-        playerMove = 'nożyce';
-    }*/
+    let playerMove = getMoveName(argMovePlayer);
 
     printMessage('Twój ruch to: ' + playerMove);
 
     function displayResult(argComputerMove, argPlayerMove){
-        printMessage('Zagrałem' + argComputerMove + ', a Ty ' + argPlayerMove);
+        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
         if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
             printMessage('You win!');
@@ -68,17 +49,17 @@ function playGame(){
             printMessage('The game ended in a draw :(');
         } else if  (argComputerMove == 'papier' && argPlayerMove == 'papier') {
             printMessage('The game ended in a draw :(');
-        } else if  (cargComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
+        } else if  (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
             printMessage('The game ended in a draw :(');
         } else if (argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch') {
             printMessage('You need to choose 1, 2 or 3');
-        } else if (argComputerMovee == 'papier' && argPlayerMove == 'nieznany ruch') {
+        } else if (argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch') {
             printMessage('You need to choose 1, 2 or 3');
         } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch') {
             printMessage('You need to choose 1, 2 or 3');
         }
     }
-    displayResult();
+    displayResult(computerMove, playerMove);
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
