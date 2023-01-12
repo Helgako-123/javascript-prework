@@ -16,17 +16,17 @@ function playGame(argMovePlayer){
     }
 
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
     printMessage('Mój ruch to: ' + computerMove); 
 
     console.log('Gracz wpisał: ' + playerInput);
 
-    let playerMove = getMoveName(argMovePlayer);
+    const playerMove = getMoveName(argMovePlayer);
 
     printMessage('Twój ruch to: ' + playerMove);
 
